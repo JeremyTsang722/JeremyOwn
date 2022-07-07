@@ -36,21 +36,70 @@
         overflow-y: scroll;
       }
       .box::-webkit-scrollbar {
-        display: none; /* Chrome Safari */
+        display: none;
+        align-items: center;
+        justify-content: center; /* Chrome Safari */
       }
+.container {
+  position: relative;
+  width: 150px;
+margin: auto;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+margin: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #8d5594;
+margin: auto;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+margin: auto;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+margin: auto;
+}
     </style>
 </head>
 <body>
 <div class="box">
-<p style="text-align:center;">
-        <img src="./image/touxiang.jpg" width="200px" height="200px" align="center" style="
+    <div class="container">
+<div style="text-align:center">
+        <img src="./image/touxiang.jpg" width="150px" height="150px" style="
     align-items: center;
 ">
-</p>
-<p align="center">这是拼凑了一些模板做出来的网页</p>
+</div>
+        <div class="overlay">
+            <div class="text">头像</div>
+            </div>
+        </div>
+<p align="center">个人练习主页</p>
+<p align="center">可以把鼠标悬停在头像看看效果</p>
+<p align="left">这行靠左</p>
 <p align="center"><a href="https://nba.hupu.com/">这是一个居中的网页链接，点击可以跳转到虎扑体育</a>
 </p>
-<p align="center">这是完成这行代码的时间2022.7.7-23:54</p>
-<p align="center">测试完毕</p>
+<p align="right">这行靠右</p>
+<p align="center">代码完成时间2022.7.8-00:45</p>
 </div>
 </body>
